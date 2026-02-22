@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta name="description" content="Una aplicación especial para mi chamita hermosa">
+    <title>Para Mi Chamita Hermosa ❤️</title>
+    <link rel="icon" href="https://fav.farm/💖" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Splash Screen (Cargador) -->
+    <div id="splashScreen" class="splash-screen">
+        <div class="giant-heart splash-heart">💖</div>
+        <h2 class="splash-text">Construyendo una sorpresa...</h2>
+    </div>
+
+    <div class="background-effects">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+    </div>
+
+    <div class="hearts-container" id="hearts-container"></div>
+
+    <main class="container">
+        <section class="hero glass-panel">
+            <h1 class="title">CHAMAAAAAAA ✨</h1>
+            <p class="subtitle">Una pequeña sorpresa hecha con mucho amor para mi chamita, la mujer más increíble del
+                mundo, solo
+                para recordarte lo mucho que me importas.</p>
+
+            <!-- Contador de Tiempo -->
+            <div class="time-counter">
+                <p class="time-title">Tiempo siendo inmensamente feliz a tu lado:</p>
+                <div class="time-boxes" id="timeCounter">
+                    <div class="time-box"><span id="years">0</span><small>Años</small></div>
+                    <div class="time-box"><span id="months">0</span><small>Meses</small></div>
+                    <div class="time-box"><span id="days">0</span><small>Días</small></div>
+                    <div class="time-box"><span id="hours">0</span><small>Horas</small></div>
+                    <div class="time-box"><span id="minutes">0</span><small>Minutos</small></div>
+                    <div class="time-box"><span id="seconds">0</span><small>Segundos</small></div>
+                </div>
+            </div>
+            <button class="love-btn" id="loveBtn">
+                <span>¿Cuánto te amo?</span>
+                <span class="icon">❤️</span>
+            </button>
+        </section>
+
+        <section class="reasons hidden" id="reasonsSection">
+            <h2 class="section-title">Razones por las que te amo ❤️</h2>
+            <div class="cards-grid">
+                <div class="reason-card" id="card-1">
+                    <div class="card-icon">🌟</div>
+                    <h3>Tu hermosa sonrisa</h3>
+                    <p>Iluminas mi vida entera cada vez que sonríes. Es mi vista favorita en todo el universo.</p>
+                </div>
+                <div class="reason-card" id="card-2">
+                    <div class="card-icon">💖</div>
+                    <h3>Tu forma de ser</h3>
+                    <p>Me encantas por lo maravillosa, dulce y auténtica que eres, mi chamita hermosa.</p>
+                </div>
+                <div class="reason-card" id="card-3">
+                    <div class="card-icon">🫂</div>
+                    <h3>Tus abrazos</h3>
+                    <p>Son mi lugar seguro, mi paz y mi hogar. No hay nada como estar entre tus brazos.</p>
+                </div>
+                <div class="reason-card" id="card-4">
+                    <div class="card-icon">🔥</div>
+                    <h3>Ese cuerpazo</h3>
+                    <p>Me gustan muchísimo tus nalgas y tu cuquita, todo de ti me vuelve completamente loco, y no me
+                        canso de ti.</p>
+                </div>
+            </div> <!-- Termina cards-grid -->
+
+            <!-- Galería de Polaroids -->
+            <div class="polaroid-gallery">
+                <h3 class="polaroid-title">Nuestros Momentos</h3>
+                <div class="polaroid-track">
+                    <div class="polaroid">
+                        <div class="polaroid-img-wrapper">
+                            <!-- Placeholder, el usuario podrá poner su foto aquí -->
+                            <img src="FOTO1.jpeg" alt="Nosotros">
+                        </div>
+                        <p class="polaroid-caption">Mi momento favorito 💖</p>
+                    </div>
+                    <div class="polaroid">
+                        <div class="polaroid-img-wrapper">
+                            <img src="FOTO2.jpeg" alt="Nosotros">
+                        </div>
+                        <p class="polaroid-caption">Siempre juntos✨</p>
+                    </div>
+                    <div class="polaroid">
+                        <div class="polaroid-img-wrapper">
+                            <img src="FOTO3.jpeg" alt="Nosotros">
+                        </div>
+                        <p class="polaroid-caption">Te amo infinito 🥰</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta Raspadito Secreta -->
+            <div class="scratch-card-container">
+                <h3 class="scratch-title">Tengo un secreto para ti...</h3>
+                <p class="scratch-hint">Usa tu dedo o el ratón para raspar y descubrirlo 👇</p>
+                <div class="scratch-wrapper">
+                    <!-- El texto secreto que está debajo -->
+                    <div class="scratch-content">
+                        <h4 class="secret-text">✨ Espero hacerte muy feliz el resto de nuestros días ✨</h4>
+                    </div>
+                    <!-- El canvas que lo cubre arriba -->
+                    <canvas id="scratchCanvas" width="350" height="200"></canvas>
+                </div>
+            </div>
+
+            <div class="message-container glass-panel">
+                <p class="love-message" id="finalMessage">
+                    Eres la persona más especial en mi vida. Mi chamita preciosa, te amo de aquí hasta el
+                    infinito y más allá. Cada día a tu lado es un regalo maravilloso. ¡Gracias por existir y ser parte
+                    de mi vida! 💕
+                </p>
+                <div style="margin-top: 2rem;">
+                    <button class="love-btn video-btn" id="openVideoBtn">
+                        <span>Ver sorpresa especial</span>
+                        <span class="icon">🎥</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        </section>
+
+        <!-- Video Modal -->
+        <div id="videoModal" class="modal hidden">
+            <div class="modal-content glass-panel">
+                <span class="close-btn" id="closeVideo">&times;</span>
+                <div class="video-wrapper">
+                    <video id="specialVideo" controls>
+                        <!-- Usa un video de prueba por ahora (gatos lindos) hasta que el usuario comparta el suyo -->
+                        <source src="MIMONITA.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <!-- Heart Transition Overlay -->
+        <div id="heartOverlay" class="heart-overlay hidden">
+            <div class="heart-content">
+                <div class="giant-heart">❤️</div>
+                <h2 class="te-amo-text">¡TE AMO!</h2>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
